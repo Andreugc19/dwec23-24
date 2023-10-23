@@ -3,9 +3,9 @@
 */
 
 // Definir Arrays
-let vacio = []; // No tiene elementos
-let primos = [2, 3, 5, 7, 11]; // Con 5 elementos numericos
-let miscelanea = [1.1, true, "a",]; // Varios tipos y coma by the face
+// let vacio = []; // No tiene elementos
+// let primos = [2, 3, 5, 7, 11]; // Con 5 elementos numericos
+// let miscelanea = [1.1, true, "a",]; // Varios tipos y coma by the face
 // Los valores no tienen porque ser constantes
 // let n = 1024;
 // let tabla = [n, n + 1, n + 2, n + 3];
@@ -381,10 +381,10 @@ let miscelanea = [1.1, true, "a",]; // Varios tipos y coma by the face
 // METODOS DE ARRAYS
 // forEach(): Ejecuta una funcion (nuestra) una vez
 // por cada elemento del array.
-const numeros = [1, 2, 3, 4, 5];
-const multiplica = (n) => {
-  return n * 2
-}
+// const numeros = [1, 2, 3, 4, 5];
+// const multiplica = (n) => {
+//   return n * 2
+// }
 // numeros.forEach((numero) => {
 //   console.log(multiplica(numero));
 // })
@@ -453,3 +453,97 @@ const multiplica = (n) => {
 //   }
 // });
 // console.log(todosNumerosPares);
+
+// CLASSES - class
+
+// class Persona {
+//   constructor(nombre) {
+//     this.nombre = nombre;
+//   }
+
+//   saludar() {
+//     console.log(`Hola, soy ${this.nombre}.`);
+//   }
+// }
+
+// const andreu = new Persona("Andreu");
+// console.log(andreu);
+// andreu.saludar();
+
+// // HERENCIA
+// class Empleado extends Persona {
+//   constructor(nombre, salario) {
+//     super(nombre);
+//     this.salario = salario;
+//   }
+
+//   trabajar() {
+//     console.log(`${this.nombre} está trabajando.`);
+//   }
+// }
+
+// const maria = new Empleado("María", 300000);
+// console.log(maria);
+// maria.saludar();
+// maria.trabajar();
+
+// Simbolos
+/*
+  Los simbolos son una nueva clase de datos introducida porES6.
+  Son valores unicos e inmutables.
+  Se pueden utilizar como identificadores de propiedades de objetos.
+*/
+// const id = Symbol("id");
+// const persona = {
+//   nombre: "Andreu",
+//   [id]: 1
+// };
+// console.log(persona[id]);
+
+// ITERADORES
+// Son objetos que implementan el protocolo de interacion en JavaScript.
+// Permiten recorrer y acceder a los elementos de una coleccion uno a uno.
+
+// const numeros = [1, 2, 3];
+// const iterador = numeros[Symbol.iterator]();
+
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+
+// SET
+// Permite almacenar valores ÚNICOS de qualquier tipo.
+// No permite duplicados y ofrece metodos para agregar,
+// eliminar y verificar la existencia de elementos.
+
+// const setNumeros = new Set();
+// setNumeros.add(1);
+// setNumeros.add(2);
+// setNumeros.add(3);
+
+// console.log(setNumeros.has(2));
+// setNumeros.delete(2);
+// console.log(setNumeros.has(2));
+
+// console.log(setNumeros.size);
+// console.log(setNumeros);
+
+// const iteratorNumeros = setNumeros[Symbol.iterator]();
+// console.log(iteratorNumeros.next());
+
+// MAP
+// Permite almacenar PARES clave-valor, donde cada calve es ÚNICA.
+// Permite operaciones de busqueda, insercion y eliminacion.
+
+// const mapaNombres = new Map();
+// mapaNombres.set("nombre", "Ana")
+// mapaNombres.set("edad", 33);
+// mapaNombres.set("profesion", "Desarrollador");
+
+// console.log(mapaNombres.get("nombre"));
+// console.log(mapaNombres.get("edad"));
+// mapaNombres.delete("edad");
+// console.log(mapaNombres.has("edad"));
+// console.log(mapaNombres.size);
+// console.log(mapaNombres);
