@@ -48,5 +48,5 @@ function stop() {
 }
 
 function reset() {
-    setTimeout(reiniciarCrono, 5000)
+    setTimeout(reiniciarCrono, 0)
 }
