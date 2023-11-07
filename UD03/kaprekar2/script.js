@@ -87,7 +87,7 @@ function kaprekar(numero) {
 
     let recursividad = formateaNumeroACuatroDigitos(numero.toString(), true);
 
-    // Realizamos la recursividad
+    // Realizamos la recursividad.
     if(recursividad != numeroKaprekar) {
       kaprekar(recursividad);
     } else {
