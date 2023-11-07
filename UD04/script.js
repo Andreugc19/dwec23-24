@@ -548,3 +548,62 @@
 // console.log(mapaNombres.size);
 // console.log(mapaNombres);
 
+// COOKIES
+/*
+  - Monitorizar la actividad de los usuarios.
+  - Mantener opciones de visualizacion o de aspecto
+  para el usuario.
+  - Almacenar variables en el lado cliente.
+  - Identificacion o autenticacion
+
+  CREAR UNA COOKIE
+*/
+// document.cookie = "usuario=Oreo";
+// function crearCookie(usuarioCookie) {
+//   console.log("Creando la cookie...");
+//   usuarioCookie += ";expires=Mon, 6 Nov 2023 12:15:00 GMT";
+//   document.cookie = "usuario = " + encodeURIComponent(usuarioCookie);
+// }
+
+// function leerCookie() {
+//   console.log("Leyendo la cookie...");
+//   console.log(decodeURIComponent(document.cookie));
+// }
+
+/*
+  LOCAL STORAGE
+
+  setItem(clave, valor)
+
+  getItem(clave)
+*/
+
+function guardarValores() {
+  console.log("Guardando valores en el Local Storage");
+  let usuariosWeb = {
+    nombre: "Andreu",
+    apellido: "Garcia"
+  }
+  localStorage.setItem("usuarios", JSON.stringify(usuariosWeb));
+}
+
+function leerValores() {
+  console.log("Leyendo valores en el Local Storage");
+  let valor = JSON.parse(localStorage.getItem("usuarios"));
+  console.log(valor == null ? "La clave no se ha recuperado" : valor);
+
+}
+
+/*
+  RECURSIVIDAD
+*/
+
+function factorial(numero) {
+
+  if(numero == 0) return 1;
+
+  return (numero * factorial(numero - 1));
+}
+
+let numero = factorial(6);
+console.log(numero);
