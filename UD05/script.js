@@ -56,13 +56,39 @@
 // let error = document.querySelector('body > div.error');
 // error.classList.add("paco");
 // error.classList.remove("error");
+// let paras = document.getElementsByTagName('p');
+// let hijo = paras[2];
+// console.log(hijo);
+// let padre = hijo.parentNode;
+// console.log(padre);
+// let primerHermano = padre.firstElementChild;
+// console.log(primerHermano);
+// let siguienteHermano = hijo.nextElementSibling;
+// console.log(siguienteHermano);
 
-let paras = document.getElementsByTagName('p');
-let hijo = paras[2];
-console.log(hijo);
-let padre = hijo.parentNode;
-console.log(padre);
-let primerHermano = padre.firstElementChild;
-console.log(primerHermano);
-let siguienteHermano = hijo.nextElementSibling;
-console.log(siguienteHermano);
+// EVENTOS
+// Referenciamos el elemento del DOM
+const par = document.querySelector('p');
+// Creamos un evento para ese elemento
+par.addEventListener('click', (e) => {
+    // escribeLog();
+    console.log(e.target.innerText);
+    e.target.innerText = "Texto cambiado";
+    console.log(e.target.innerText);
+});
+// Creamos otro evento para ese elemento
+// par.addEventListener('mouseover', () => {
+//     escribeLog();
+// })
+
+function escribeLog() {
+    console.log('He hecho click sobre el parrafo');
+}
+
+function escribeOtroLog() {
+    console.log('He pasado el puentero sobre el primer parrafo');
+}
+
+document.addEventListener("keydown", (e) => {
+    console.log("Tecla presionada: " + e.key);
+});
